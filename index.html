@@ -1,205 +1,433 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dheeraj Pavan Adapa | Senior UI/UX Designer</title>
-  <meta name="description" content="Senior UI/UX Designer | 10+ Years | Enterprise dashboards, workflows, wireframes, and prototypes." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <title>Dheeraj Pavan Adapa | Senior UI/UX Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: linear-gradient(135deg, #0b1220, #0f1b2e);
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(11, 18, 32, 0.95);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      border-bottom: 1px solid #1e293b;
+      backdrop-filter: blur(8px);
+    }
+    nav strong {
+      font-size: 18px;
+      letter-spacing: 0.2px;
+    }
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 14px;
+    }
+    nav a:hover,
+    nav a.active {
+      color: #60a5fa;
+    }
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 60px;
+    }
+    h1 {
+      font-size: 48px;
+      line-height: 1.2;
+      margin: 0 0 20px;
+    }
+    h2 {
+      font-size: 30px;
+      margin: 0 0 24px;
+    }
+    p {
+      font-size: 18px;
+      color: #cbd5e1;
+      max-width: 900px;
+      margin-top: 0;
+    }
+    .pill {
+      display: inline-block;
+      padding: 8px 14px;
+      margin: 10px 10px 0 0;
+      border-radius: 999px;
+      background: #111827;
+      border: 1px solid #1f2937;
+      font-size: 14px;
+      color: #e5e7eb;
+    }
+    .card {
+      background: #0f172a;
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid #1e293b;
+      margin-bottom: 24px;
+    }
+    .muted { color: #94a3b8; font-size: 14px; }
+    ul {
+      margin: 12px 0 0;
+      padding-left: 18px;
+      color: #cbd5e1;
+      font-size: 16px;
+    }
+    li { margin: 8px 0; }
+    a { color: #93c5fd; }
+    a:hover { color: #60a5fa; }
+    .top-actions {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid #1e293b;
+      background: #0f172a;
+      color: #e5e7eb;
+      text-decoration: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .btn:hover { border-color: #60a5fa; color: #60a5fa; }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    @media (max-width: 900px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #94a3b8;
+      border-top: 1px solid #1e293b;
+    }
+    @media (max-width: 768px) {
+      nav { flex-direction: column; gap: 10px; padding: 16px 18px; }
+      section { padding: 60px 24px; }
+      h1 { font-size: 36px; }
+    }
+    /* Small helper for toast */
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 24px;
+      transform: translateX(-50%);
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid #1e293b;
+      color: #e5e7eb;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 14px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 200ms ease;
+      z-index: 999;
+    }
+    .toast.show { opacity: 1; }
+  </style>
 </head>
 
 <body>
-  <header class="header">
-    <a class="brand" href="#top">Dheeraj</a>
 
-    <nav class="nav">
-      <a href="#projects">Project</a>
-      <a href="#process">Process</a>
-      <a href="#play">Play</a>
+  <!-- NAVIGATION -->
+  <nav>
+    <strong>Dheeraj Pavan Adapa</strong>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
       <a href="#contact">Contact</a>
-    </nav>
+    </div>
+  </nav>
 
-    <button class="menu" aria-label="Open menu" aria-expanded="false">Menu</button>
-  </header>
+  <!-- HERO -->
+  <section>
+    <h1>Building clean, scalable,<br>accessible enterprise UIs.</h1>
+    <p>
+      Senior UI/UX Engineer with 10+ years of experience in UI/UX design and
+      front-end development across retail, healthcare, state government, and banking.
+      Strong in React (18+) and Angular (10+), design-to-code delivery, performance,
+      and accessibility (WCAG 2.1, ARIA, Section 508).
+    </p>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-left">
-        <h1>
-          Senior UI/UX Designer building enterprise-grade dashboards and workflow UX.
-        </h1>
-        <p>
-          10+ years designing business web applications with strong wireframing, interaction design,
-          accessibility-first patterns, and developer-friendly handoffs.
-        </p>
+    <div>
+      <span class="pill">React 18+</span>
+      <span class="pill">Angular 10+</span>
+      <span class="pill">UX / UI Design</span>
+      <span class="pill">Design Systems</span>
+      <span class="pill">WCAG 2.1 · ARIA · Section 508</span>
+      <span class="pill">Figma · Adobe XD · Sketch</span>
+      <span class="pill">Tailwind · SCSS · Bootstrap</span>
+    </div>
 
-        <div class="hero-cta">
-          <a class="btn" href="#projects">View projects</a>
-          <a class="btn btn-ghost" href="#contact">Let’s collaborate</a>
-        </div>
+    <div class="top-actions">
+      <button class="btn" id="btnPrint" type="button">Print / Save PDF</button>
+      <button class="btn" id="btnCopyEmail" type="button">Copy Email</button>
+      <button class="btn" id="btnCopyPhone" type="button">Copy Phone</button>
+    </div>
+  </section>
 
-        <div class="meta">
-          <span>Figma • Axure • Adobe XD • WCAG</span>
-          <span>US • Remote/Hybrid</span>
-        </div>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>What I Focus On</h2>
+    <div class="card">
+      <p>
+        I design and build enterprise-grade web experiences that are usable, fast, and maintainable.
+        I work end-to-end, from wireframes and high-fidelity prototypes to production-ready UI
+        components and scalable front-end architecture.
+      </p>
+      <p>
+        I’m comfortable across the SDLC and Agile delivery, partnering with product owners,
+        designers, backend teams, and QA to ship accessible experiences backed by strong
+        performance and testing.
+      </p>
+
+      <div class="muted">
+        Highlights: SPA architecture · reusable component libraries · dashboards & forms ·
+        secure API integration (JWT, OAuth 2.0) · performance (lazy loading, AOT, code splitting) ·
+        testing (Jest, RTL, Karma, Jasmine)
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+
+    <div class="grid-2">
+      <div class="card">
+        <strong>Frontend Frameworks & Libraries</strong><br><br>
+        Angular (2–17) · React (18+) · Angular Material · Material UI · RxJS · Redux · Context API ·
+        Chart.js · ngx-charts · jQuery · AJAX
       </div>
 
-      <div class="hero-right">
-        <div class="card">
-          <div class="card-title">At the moment</div>
-          <div class="card-body">
-            Designing data-heavy web experiences, simplifying complex workflows, and building reusable UI patterns
-            for internal enterprise users.
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-title">My niche</div>
-          <div class="chips">
-            <span class="chip">Enterprise UX</span>
-            <span class="chip">Dashboards</span>
-            <span class="chip">Wireframes</span>
-            <span class="chip">Design Systems</span>
-            <span class="chip">Accessibility</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="section-head">
-        <h2>Projects</h2>
-        <p>Visualisations of UI/UX work, wireframes, and product flows (confidential-friendly).</p>
+      <div class="card">
+        <strong>Languages & Web</strong><br><br>
+        HTML5 · CSS3 · SCSS · JavaScript (ES5/ES6/ES9) · TypeScript · JSON · GraphQL
       </div>
 
-      <div class="grid">
-        <a class="tile" href="case-study-1.html">
-          <img src="assets/project-1.jpg" alt="Enterprise analytics dashboard preview" />
-          <div class="tile-meta">
-            <div class="tile-title">Enterprise Analytics Dashboard</div>
-            <div class="tile-sub">Navigation, filters, dense tables, role-based actions</div>
-          </div>
-        </a>
-
-        <a class="tile" href="case-study-2.html">
-          <img src="assets/project-2.jpg" alt="Healthcare portal preview" />
-          <div class="tile-meta">
-            <div class="tile-title">Healthcare Workflow Portal</div>
-            <div class="tile-sub">Forms, validations, usability iterations</div>
-          </div>
-        </a>
-
-        <a class="tile" href="case-study-3.html">
-          <img src="assets/project-3.jpg" alt="Admin workflow preview" />
-          <div class="tile-meta">
-            <div class="tile-title">Admin Approvals Redesign</div>
-            <div class="tile-sub">Simplified approvals, reduced friction, clearer IA</div>
-          </div>
-        </a>
-
-        <a class="tile" href="#contact">
-          <div class="tile-placeholder">
-            <div class="tile-title">Want the full deck?</div>
-            <div class="tile-sub">I can share more under NDA.</div>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <section id="process" class="section">
-      <div class="section-head">
-        <h2>Process</h2>
-        <p>Everyday sketches, flows, and design thinking. Links to socials + selected artifacts.</p>
+      <div class="card">
+        <strong>UX / UI & Design Tools</strong><br><br>
+        Figma · Adobe XD · Sketch · Axure RP · Balsamiq · Photoshop · Illustrator
       </div>
 
-      <div class="process">
-        <div class="card">
-          <div class="card-title">My process, usually</div>
-          <ol class="steps">
-            <li>Clarify business goals + user tasks</li>
-            <li>Flows + information architecture</li>
-            <li>Low-fi wireframes (fast iterations)</li>
-            <li>Clickable prototype + usability feedback</li>
-            <li>Hi-fi UI + component patterns</li>
-            <li>Handoff + QA with engineering</li>
-          </ol>
-        </div>
-
-        <div class="card">
-          <div class="card-title">Find me here</div>
-          <div class="links">
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://www.behance.net/" target="_blank" rel="noreferrer">Behance</a>
-            <a href="https://dribbble.com/" target="_blank" rel="noreferrer">Dribbble</a>
-          </div>
-          <div class="card-body subtle">
-            Tip: Keep confidential work anonymized. Show your wireframes, flows, patterns, and reasoning.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="play" class="section">
-      <div class="section-head">
-        <h2>Play</h2>
-        <p>Experiments, mini tools, design system components, side projects.</p>
+      <div class="card">
+        <strong>Accessibility, Performance, Testing</strong><br><br>
+        WCAG 2.1 · ARIA · Section 508 · Lighthouse · AOT · Lazy Loading · Code Splitting ·
+        Jest · React Testing Library · Karma · Jasmine
       </div>
 
-      <div class="grid">
-        <div class="mini">
-          <div class="mini-title">Design system snippets</div>
-          <div class="mini-sub">Buttons, inputs, tables, modals</div>
-        </div>
-        <div class="mini">
-          <div class="mini-title">Dashboard layout experiments</div>
-          <div class="mini-sub">Density vs readability tradeoffs</div>
-        </div>
-        <div class="mini">
-          <div class="mini-title">Accessibility checks</div>
-          <div class="mini-sub">Keyboard, focus, errors</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="section-head">
-        <h2>Let’s collaborate</h2>
-        <p>Share what you’re building. I’ll reply with next steps and availability.</p>
+      <div class="card">
+        <strong>CI/CD, Cloud, Delivery</strong><br><br>
+        Git · GitHub · Bitbucket · Azure DevOps · GitHub Actions · Jenkins ·
+        Azure App Service · Azure Static Web Apps · Azure API Management
       </div>
 
-      <form class="form" action="https://formspree.io/f/yourFormId" method="POST">
-        <div class="row">
-          <label>
-            Name
-            <input name="name" required />
-          </label>
-          <label>
-            Email
-            <input name="email" type="email" required />
-          </label>
-        </div>
-
-        <label>
-          What do you have in mind?
-          <textarea name="message" rows="6" required></textarea>
-        </label>
-
-        <button class="btn" type="submit">Submit</button>
-
-        <p class="subtle">
-          Free contact form: replace the Formspree URL with your own (takes 2 minutes).
-        </p>
-      </form>
-
-      <div class="footer">
-        <div>© <span id="year"></span> Dheeraj Pavan Adapa</div>
-        <div class="footer-links">
-          <a href="mailto:hiredheerajpavan@gmail.com">hiredheerajpavan@gmail.com</a>
-        </div>
+      <div class="card">
+        <strong>Collaboration</strong><br><br>
+        Agile / Scrum · JIRA · Confluence · Stakeholder Reviews · Design QA · Code Reviews · Mentoring
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <div class="card">
+      <strong>Senior Frontend Developer (UI/UX Engineer) – Lowe’s</strong><br>
+      <em class="muted">Sep 2023 – Present | Charlotte, NC</em>
+      <ul>
+        <li>Designed and developed responsive, user-friendly enterprise UIs using React 18+ across retail platforms.</li>
+        <li>Refactored legacy AngularJS into modular React components to improve maintainability, performance, and UI consistency.</li>
+        <li>Converted Figma/Adobe XD designs into accessible, pixel-perfect components; ensured WCAG 2.1 + ARIA compliance.</li>
+        <li>Built reusable component libraries with Tailwind, Bootstrap, and SCSS using consistent patterns and guidelines.</li>
+        <li>Integrated secure REST APIs with JWT authentication and role-based rendering; improved navigation with route guards.</li>
+        <li>Optimized performance using lazy loading, code splitting, and bundle techniques; improved Lighthouse outcomes.</li>
+        <li>Collaborated in Agile delivery, mentored junior devs, and supported testing with Jest/RTL and Angular test tooling.</li>
+      </ul>
+      <p class="muted">
+        Environment: React 18+ · Angular 10+ · TypeScript · Tailwind · MUI · RxJS · Redux · Azure · GitHub/Azure DevOps
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>Senior Frontend Developer (UI/UX Engineer) – Elevance Health</strong><br>
+      <em class="muted">Mar 2022 – Aug 2023 | Norfolk, VA</em>
+      <ul>
+        <li>Built interactive, accessible dashboards and data-driven UI using Angular 14 for internal healthcare stakeholders.</li>
+        <li>Translated Figma/Adobe XD wireframes into responsive Angular components aligned with brand and compliance needs.</li>
+        <li>Implemented complex workflows using Reactive Forms (multi-step, conditional rendering, dynamic validations).</li>
+        <li>Integrated secure REST APIs with JWT session handling; applied route guards and lazy loading for performance.</li>
+        <li>Created i18n support and added charting (ngx-charts, Chart.js) for real-time metrics and trend visualization.</li>
+        <li>Supported usability testing and UI audits; iterated on navigation and layout for clarity and efficiency.</li>
+      </ul>
+      <p class="muted">
+        Environment: Angular 14 · TypeScript · SCSS · Bootstrap · Angular Material · RxJS · Karma/Jasmine · Bitbucket
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>Frontend Developer (UI/UX Engineer) – State of Arizona (DOE)</strong><br>
+      <em class="muted">Oct 2019 – Dec 2021 | Phoenix, AZ</em>
+      <ul>
+        <li>Delivered Angular 10 UIs for state education and financial dashboards supporting data-heavy administration workflows.</li>
+        <li>Built reusable UI components with Angular Material and Bootstrap; handled tabular layouts and form-heavy modules.</li>
+        <li>Implemented accessibility best practices (WCAG 2.1, ARIA) and ensured cross-browser behavior.</li>
+        <li>Used RxJS for state flow and updates; integrated secure REST APIs with dynamic data rendering.</li>
+        <li>Optimized app performance with lazy loading and AOT compilation; added visualization with ngx-charts and Chart.js.</li>
+      </ul>
+      <p class="muted">
+        Environment: Angular 10 · TypeScript · SCSS · Bootstrap · RxJS · Karma/Jasmine · Bitbucket · JIRA
+      </p>
+    </div>
+
+    <div class="card">
+      <strong>Web Designer / Developer – US Bank</strong><br>
+      <em class="muted">Apr 2015 – Sep 2019 | Dallas, TX</em>
+      <ul>
+        <li>Developed front-end applications using Angular in an Agile environment for enterprise financial workflows.</li>
+        <li>Built dynamic forms using Reactive and Template-driven approaches with client-side validation and live feedback.</li>
+        <li>Created reusable components and layout structures with Angular Material, SCSS, and Bootstrap.</li>
+        <li>Applied WCAG accessibility and ARIA attributes; ensured responsive behavior across modern browsers.</li>
+        <li>Integrated REST APIs using JWT authentication; supported UI testing and collaborated with QA for defect fixes.</li>
+      </ul>
+      <p class="muted">
+        Technologies: Angular 2–8 · TypeScript · SCSS · Bootstrap · Angular Material · REST · JWT · Git · JIRA
+      </p>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <strong>Kennesaw State University</strong><br>
+      <em class="muted">Bachelor of Science in Computer Science | Aug 2012 – May 2015</em>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>
+        <strong>Email:</strong> <a id="emailLink" href="mailto:dheeraja2330@gmail.com">dheeraja2330@gmail.com</a><br>
+        <strong>Phone:</strong> <a id="phoneLink" href="tel:+14704004224">+1 (470) 400-4224</a><br>
+        <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/dheeraja18/" target="_blank" rel="noreferrer">linkedin.com/in/dheeraja18</a><br>
+        <strong>Location:</strong> USA (Open to Remote / Hybrid)
+      </p>
+      <p class="muted">
+        Open to Senior UI/UX Engineer and Senior Frontend roles focused on enterprise platforms,
+        dashboards, design systems, and accessibility-first delivery.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Dheeraj Pavan Adapa · Built with GitHub Pages
+  </footer>
+
+  <div class="toast" id="toast">Copied</div>
+
+  <script>
+    (function () {
+      const toastEl = document.getElementById('toast');
+      const navLinks = Array.from(document.querySelectorAll('nav a'));
+
+      function showToast(message) {
+        if (!toastEl) return;
+        toastEl.textContent = message;
+        toastEl.classList.add('show');
+        window.clearTimeout(showToast._t);
+        showToast._t = window.setTimeout(() => toastEl.classList.remove('show'), 1300);
+      }
+
+      async function copyText(text) {
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(text);
+          } else {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.left = '-9999px';
+            document.body.appendChild(ta);
+            ta.focus();
+            ta.select();
+            document.execCommand('copy');
+            ta.remove();
+          }
+          showToast('Copied!');
+        } catch (e) {
+          showToast('Copy failed');
+        }
+      }
+
+      // Print / Save PDF
+      const btnPrint = document.getElementById('btnPrint');
+      if (btnPrint) {
+        btnPrint.addEventListener('click', () => window.print());
+      }
+
+      // Copy Email
+      const btnCopyEmail = document.getElementById('btnCopyEmail');
+      if (btnCopyEmail) {
+        btnCopyEmail.addEventListener('click', () => {
+          const email = document.getElementById('emailLink')?.textContent?.trim() || 'dheeraja2330@gmail.com';
+          copyText(email);
+        });
+      }
+
+      // Copy Phone
+      const btnCopyPhone = document.getElementById('btnCopyPhone');
+      if (btnCopyPhone) {
+        btnCopyPhone.addEventListener('click', () => {
+          const phone = document.getElementById('phoneLink')?.textContent?.trim() || '+1 (470) 400-4224';
+          copyText(phone);
+        });
+      }
+
+      // Active nav link on scroll
+      const sections = ['about', 'skills', 'experience', 'education', 'contact']
+        .map(id => document.getElementById(id))
+        .filter(Boolean);
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          navLinks.forEach(a => a.classList.remove('active'));
+          const active = navLinks.find(a => a.getAttribute('href') === `#${entry.target.id}`);
+          if (active) active.classList.add('active');
+        });
+      }, { root: null, threshold: 0.35 });
+
+      sections.forEach(sec => observer.observe(sec));
+    })();
+  </script>
+
 </body>
 </html>
+
